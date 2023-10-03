@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:flutter/src/widgets/framework.dart';
 
 class Levels extends StatelessWidget {
   final String title;
@@ -36,13 +35,13 @@ required this.image,
               // child: Center(
           child: Column(children: [
             Expanded(
-              flex:4,
+              flex:3,
               child: Padding(
               padding: const EdgeInsets.only(top:10.0),
               child: Image.asset(image,alignment: Alignment.center),
             )),
-           const  SizedBox(height: 7,),
-           Expanded(child: Text(title,style:const  TextStyle(fontSize: 13,color: Colors.black),textAlign: TextAlign.end,))
+          const  SizedBox(height: 3,),
+           Expanded(child: Text(title,style:const  TextStyle(fontSize: 13,color: Colors.black),textAlign: TextAlign.center,))
           ]),
               ),
         ),

@@ -1,26 +1,27 @@
 
 import 'package:flutter/material.dart';
+//                                    theme coding
+// import 'package:fyp/app/components/change_theme_button_widget.dart';
+// import 'package:fyp/app/screens/mode.dart';
+
 import 'package:fyp/app/constant.dart';
 import 'package:fyp/app/screens/about.dart';
-//import 'package:fyp/app/screens/home.dart';
 import 'package:fyp/app/screens/parentsguid.dart';
-//import 'package:fyp/app/screens/secondscreen.dart';
-
 
 class MyAppBar extends StatelessWidget implements PreferredSize {
-  final Icon leading;
+  final IconButton? leading;
  //final  String leadingImage;
-// final VoidCallback onPress;
+// final VoidCallback onPressed;
 //final String title;
-//final Function( )onleadingtap;
+final VoidCallback onleadingtap;
 final  List<Widget> actions;
 
 
   const  MyAppBar({Key? key,
-  //required this.onleadingtap,
- this.leading=const Icon(Icons.arrow_back_ios_new_outlined),
+  required this.onleadingtap,
+this.leading,
   //required this.title,
- // required this.onPress,
+//  required this.onPressed,
   required this.actions,
   
   }):super(key:key);
@@ -29,49 +30,38 @@ Size get preferredSize=>const Size.fromHeight(130);
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      //leadingWidth:79.0,
+     
       backgroundColor: kbgcolor,
-leading:Transform.scale(
-scaleY: 3.0,
-scaleX: 3.0,
-  child:   Padding(
-  
-    padding: const EdgeInsets.only(
-      
-      left:17,
-      right: 5,
-      
-    ),
-  //child:
-  //Image.asset('assets/images/logo.jpg'),
-    child: Icon(Icons.arrow_back_ios_new_outlined,size: 10,),
-  //iconSize: 10.0,
-//   onPressed: onleadingtap,
-// ),
-  
-  ),
-),
 
-
-      //title: Center(child: Text(title,style: const TextStyle(fontSize: 30,fontWeight:FontWeight.bold))),
-      actions:[
-        //const Icon(Icons.more_vert,size: 33,),
+    leading:GestureDetector(
+      onTap:onleadingtap,
+       child:const Padding(
+         padding:EdgeInsets.only(top: 23.0),
+         child: Icon(Icons.arrow_back_ios_new_outlined,size: 25,),
+       )
+       ),
+  
+      actions:[ 
+  //                              theme coding        
+        
+    //const ChangeThemeButtonWidget(),
+        
       PopupMenuButton(itemBuilder: (BuildContext context){
 return const [
   PopupMenuItem (
     value: 1,
-    child: Text('About')
+    child: Text('About'),
     ),
     PopupMenuItem(
       value:2,
-      child: Text('Parent Guide'),
+      child: Text('Parent Guideness'),
     
     ),
-    PopupMenuItem(
-      value:3,
-      child: Text('theme'),
+    // PopupMenuItem(
+    //   value:3,
+    //   child: Text('theme'),
     
-    )
+    //),
 ];
 
       },
@@ -79,18 +69,22 @@ return const [
         if (value==1){
           Navigator.push(context, MaterialPageRoute(builder: (context)=>const About()));
         }
-   else if (value==2){
-Navigator.push(context, MaterialPageRoute(builder: (context)=>const Parentsguide()));
-   }
-   
-   else{
-     value==3;
-   }
-   Navigator.push(context,MaterialPageRoute(builder: (context)=>const About()));
+         else{
+   Navigator.push(context,MaterialPageRoute(builder: (context)=>const Parentsguide()));
+         }
       },
-      )
+//    else if (value==2){
+// Navigator.push(context, MaterialPageRoute(builder: (context)=>const Parentsguide()));
+//    }
+   
+//    else{
+//      value==3;
+//    }
+//    Navigator.push(context,MaterialPageRoute(builder: (context)=>const Mode()));
+//       },
+      ),
       
-      ]
+      ],
     );
       
     

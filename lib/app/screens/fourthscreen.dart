@@ -55,21 +55,27 @@ import 'package:flutter/material.dart';
 import 'package:fyp/app/components/appbar.dart';
 import 'package:fyp/app/components/dua.dart';
 import 'package:fyp/app/components/homeicon.dart';
+import 'package:fyp/app/screens/thirdscreen.dart';
 class FourthScreen extends StatelessWidget {
+  const FourthScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return (
+    return  (
        Scaffold(
-        appBar:const MyAppBar(
-          actions: []
+        appBar: MyAppBar(
+          onleadingtap: () {
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>const ThirdScreen()));
+    },
+          actions: const []
           ),
-        body: Center(
+        body: const Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               Expanded(
                 child: DuaScreen(
-                  assetImagePath: 'assets/images/screen1.jpg',
+                  assetImagePath: 'assets/images/sneezing1.1.jpg',
                   iconData:Homeicon(),
                 ),
               ),

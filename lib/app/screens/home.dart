@@ -1,18 +1,19 @@
-// ignore_for_file: avoid_print
-import 'package:flutter/material.dart';
-//import 'package:fyp/app/components/appbar.dart';
-import 'package:fyp/app/components/button.dart';
-import 'package:fyp/app/constant.dart';
+// ignore_for_file: avoid_print, unused_local_variable
+//         theme coding  
+//import 'package:fyp/app/provider/theme_provider.dart';
+//         theme coding  
+//import 'package:fyp/app/screens/mode.dart';
+  //         theme coding  
+//import 'package:provider/provider.dart';
 import 'package:fyp/app/screens/about.dart';
 import 'package:fyp/app/screens/parentsguid.dart';
 import 'package:fyp/app/screens/pillar_screen.dart';
 import 'package:fyp/app/screens/secondscreen.dart';
+import 'package:flutter/material.dart';
+import 'package:fyp/app/components/button.dart';
+import 'package:fyp/app/constant.dart';
+//import 'package:fyp/app/components/change_theme_button_widget.dart';
 
-
-// void main(){
-
-//   runApp(const HomeScreen());
-// }
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -21,14 +22,25 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+   
+  
   @override 
   Widget build(BuildContext context) {
+    //         theme coding  
+    // final text = Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+    //     ? 'DarkTheme'
+    //     : 'LightTheme';
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 103,
         backgroundColor: kbgcolor,
         leadingWidth: 99,
         leading: Image.asset('assets/images/logo.png'),
         actions: [
+//                     theme coding
+
+ //                   const ChangeThemeButtonWidget(),
+ 
           PopupMenuButton(itemBuilder: (BuildContext context){
 return const [
   PopupMenuItem (
@@ -37,14 +49,15 @@ return const [
     ),
     PopupMenuItem(
       value:2,
-      child: Text('Parent Guide'),
+      child: Text('Parents Guide'),
     
     ),
-    PopupMenuItem(
-      value:3,
-      child: Text('theme'),
+    //         theme coding  
+    // PopupMenuItem(
+    //   value:3,
+    //   child: Text('theme'),
     
-    )
+    // )
 ];
 
       },
@@ -52,15 +65,20 @@ return const [
         if (value==1){
           Navigator.push(context, MaterialPageRoute(builder: (context)=>const About()));
         }
-   else if (value==2){
-Navigator.push(context, MaterialPageRoute(builder: (context)=>const Parentsguide()));
-   }
-   
-   else{
-     value==3;
-   }
-   Navigator.push(context,MaterialPageRoute(builder: (context)=>const About()));
+        else {
+          Navigator.push(context,MaterialPageRoute(builder: (context)=>const Parentsguide()));
+        }
       },
+     //                Same as above
+//    else if (value==2){
+// Navigator.push(context, MaterialPageRoute(builder: (context)=>const Parentsguide()));
+//    }
+   
+//    else{
+//      value==3;
+//    }
+//    Navigator.push(context,MaterialPageRoute(builder: (context)=>const Mode()));
+//       },
       )
         ],
       ),
@@ -123,7 +141,7 @@ Navigator.push(context, MaterialPageRoute(builder: (context)=>const Parentsguide
         // //   ) ,
         //   )
        body:  Center(
-            child:Expanded(
+            child:SingleChildScrollView(
               child: Column(
                 
                 children:  [

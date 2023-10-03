@@ -1,14 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 //import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:fyp/app/components/appbar.dart';
+import 'package:fyp/app/components/homeicon.dart';
 import 'package:fyp/app/components/pillerscompo.dart';
 import 'package:fyp/app/screens/Fasting.dart';
 import 'package:fyp/app/screens/Hajj.dart';
 import 'package:fyp/app/screens/Salah.dart';
 import 'package:fyp/app/screens/Tauheed.dart';
 import 'package:fyp/app/screens/Zakat.dart';
+import 'package:fyp/app/screens/home.dart';
 
 
 // void main()
@@ -22,77 +22,78 @@ class PP extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar:const MyAppBar(
-        actions:[],
+     appBar: MyAppBar(
+         onleadingtap: () {
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomeScreen()));
+    },
+        actions:const [],
       ),
       body: SingleChildScrollView(
          child:   Padding(
            padding: const EdgeInsets.only(
-          top:29.0),
+          top:59.0),
            child: Column(
             
               children:   [
-                 GestureDetector(
-                   child: Row(
-                   mainAxisAlignment: MainAxisAlignment.center,
-                    children:  [
-                         GestureDetector(onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Tauheedscreen()));
-                          },
-                           child: const Pillar(
-                                                 // onTap: () {
-                                                 //   Navigator.push(context, MaterialPageRoute(builder: (context)=>PP()));
-                                                 // },
-                                  fcontainerclr:Colors.brown,
-                                             firstheight: 130,
-                                             firstwidth: 100, 
-                                             scontainerclr: Colors.white,
-                                             secondheight: 100,
-                                             secondwidth: 70,
-                                             tcontainerclr:Colors.green ,
-                                             tecondheight:55 ,
-                                             tecondwidth: 55,
-                                             imagepath:'assets/images/Tauheed.png', 
-                                  text: 'Tauheed',
-                                 
-                                  ),
-                         ),
-                            SizedBox(width: 100,),
-                        GestureDetector(
-                          onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Salahscreen()));
-                          },
-                          child: const Pillar(
-                            // onTap: () {
-                            //   Navigator.push(context, MaterialPageRoute(builder: (context)=>PP()));
-                            // },
-                                   fcontainerclr:Colors.brown,
-                                             firstheight: 130,
-                                             firstwidth: 100, 
-                                             scontainerclr: Colors.white,
-                                             secondheight: 100,
-                                             secondwidth: 70,
-                                             tcontainerclr:Colors.green ,
-                                             tecondheight:55 ,
-                                             tecondwidth: 55,
-                                             imagepath:'assets/images/Salah.png', 
-                                   text: 'Salah',
-                                   ),
-                        ),
-                        
-                    ],
-                                 
+                 Row(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                  children:  [
+                    InkWell(onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const Tauheedscreen()));
+                        },
+                         child: const Pillar(
+                                               // onTap: () {
+                                               //   Navigator.push(context, MaterialPageRoute(builder: (context)=>PP()));
+                                               // },
+                                fcontainerclr:Colors.brown,
+                                           firstheight: 130,
+                                           firstwidth: 100, 
+                                           scontainerclr: Colors.white,
+                                           secondheight: 100,
+                                           secondwidth: 70,
+                                           tcontainerclr:Colors.green ,
+                                           tecondheight:55 ,
+                                           tecondwidth: 55,
+                                           imagepath:'assets/images/Tauheed.png', 
+                                text: 'Tauheed',
+                               
                                 ),
-                 ),
-               SizedBox(height: 17,),
+                       ),
+                          const SizedBox(width: 100,),
+                      InkWell(
+                        onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const Salahscreen()));
+                        },
+                        child: const Pillar(
+                          // onTap: () {
+                          //   Navigator.push(context, MaterialPageRoute(builder: (context)=>PP()));
+                          // },
+                                 fcontainerclr:Colors.brown,
+                                           firstheight: 130,
+                                           firstwidth: 100, 
+                                           scontainerclr: Colors.white,
+                                           secondheight: 100,
+                                           secondwidth: 70,
+                                           tcontainerclr:Colors.green ,
+                                           tecondheight:55 ,
+                                           tecondwidth: 55,
+                                           imagepath:'assets/images/Salah.png', 
+                                 text: 'Salah',
+                                 ),
+                      ),
+                      
+                  ],
+                               
+                              ),
+               const SizedBox(height: 17,),
               Row(
                mainAxisAlignment: MainAxisAlignment.center,
                children:  [
-                GestureDetector(
+                InkWell(
                   onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Zakatscreen()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const Zakatscreen()));
                           },
-                  child: Pillar(
+                  child: const Pillar(
                     // onTap: () {
                     //         Navigator.push(context, MaterialPageRoute(builder: (context)=>PP()));
                     //       },
@@ -114,11 +115,11 @@ class PP extends StatelessWidget {
               Row(
                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                     GestureDetector(
+                     InkWell(
                       onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Hajjscreen()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const Hajjscreen()));
                           },
-                       child: Pillar(
+                       child: const Pillar(
                         
                                 fcontainerclr:Colors.brown,
                        firstheight: 130,
@@ -134,15 +135,15 @@ class PP extends StatelessWidget {
                                 ),
                      ),
            const SizedBox(width: 100,),
-                      GestureDetector(
+                      InkWell(
                         onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Hajjscreen()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const Hajjscreen()));
                           },
-                        child: GestureDetector(
+                        child: InkWell(
                           onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Fastingscreen()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const Fastingscreen()));
                           },
-                          child: Pillar(
+                          child: const Pillar(
                             // onTap: () {
                             //   Navigator.push(context, MaterialPageRoute(builder: (context)=>PP()));
                             // },
@@ -165,11 +166,12 @@ class PP extends StatelessWidget {
                 
                ),
               
+                 
               ],
             ),
          ),
        ),
-      
+         bottomNavigationBar:const Homeicon(),
       );
   
   }

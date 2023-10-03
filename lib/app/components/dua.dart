@@ -41,10 +41,7 @@
 
 //   }
 // }
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:fyp/app/components/homeicon.dart';
 
 // import 'package:flutter/material.dart';
@@ -68,7 +65,7 @@ class DuaScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: containerHeight,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.grey,
       ),
       child: Stack(

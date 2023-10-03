@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Pillar extends StatelessWidget {
   final String imagepath,text;
@@ -105,7 +102,7 @@ class Pillar extends StatelessWidget {
                   
                   width: tecondwidth,
               
-                  child: Center(child:  Expanded(child: Text(text,style: TextStyle(color: Colors.white),)),),
+                  child: Center(child:  Expanded(child: Text(text,style: const TextStyle(color: Colors.white),)),),
                   
                   ),
                   ),

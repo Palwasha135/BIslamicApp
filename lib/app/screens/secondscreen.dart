@@ -1,10 +1,12 @@
 //import 'dart:ffi
 import 'package:flutter/material.dart';
 import 'package:fyp/app/components/appbar.dart';
+import 'package:fyp/app/components/homeicon.dart';
 //import 'package:fyp/app/components/homeicon.dart';
 import 'package:fyp/app/components/level.dart';
 
 import 'package:fyp/app/screens/fourthscreen.dart';
+import 'package:fyp/app/screens/home.dart';
 //import 'package:fyp/app/screens/home.dart';
 import 'package:fyp/app/screens/thirdscreen.dart';
 
@@ -20,45 +22,52 @@ class _SecondScreenState extends State<SecondScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       
-  appBar: const MyAppBar(
-   // title:'B Islamic',
+   appBar: MyAppBar(
+          //title: 'B Islamic',
   
-    // onleadingtap: () {
-    //   Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomeScreen()));
-    // },
-    actions:  [
+    onleadingtap: () {
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomeScreen()));
+    },
+    actions:  const [
       
     //  IconButton(onPressed: (){
-    //   Navigator.push(context, MaterialPageRoute(builder: (context)=>const ThirdScreen()));
+    //   Navigator.push(context, MaterialPageRoute(builder: (context)=> FourthScreen()));
     //  }, icon:const Icon(Icons.next_plan_rounded),iconSize: 38,)
     ],
-  ),
+   ),
 
-    body:GridView(gridDelegate:const  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,mainAxisSpacing: 9,crossAxisSpacing: 19,),
-      children: [
+    body:Padding(
+      padding: const EdgeInsets.only(
+        top:29,
+      ),
+      child: GridView(gridDelegate:const  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,mainAxisSpacing: 9,crossAxisSpacing: 19,),
+        children: [
+          
+          Expanded(
+            child: Levels(title: 'Level 1', containercolor: Colors.orange, image: 'assets/images/secondlvl.png', onPress: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const ThirdScreen()));
+              }),
+          ),
+      Levels(title: 'Level 2', containercolor: Colors.red, image: 'assets/images/l2.png', onPress: (){
+      Navigator.push(context, MaterialPageRoute(builder: (context)=> const FourthScreen()));
+      }) ,
         
-        Expanded(
-          child: Levels(title: 'Level 1', containercolor: Colors.orange, image: 'assets/images/secondlvl.png', onPress: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>const ThirdScreen()));
-            }),
-        ),
-    Levels(title: 'Level 2', containercolor: Colors.red, image: 'assets/images/secondlvl.png', onPress: (){
-    Navigator.push(context, MaterialPageRoute(builder: (context)=> FourthScreen()));
-    }) ,
-      
-      Levels(title: 'Level 3', containercolor: Colors.purple, image: 'assets/images/secondlvl.png', onPress: (){
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>const SecondScreen()));
-    }),
-    Levels(title: 'Level 4', containercolor: Colors.blueAccent, image: 'assets/images/secondlvl.png', onPress: (){
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>const SecondScreen()));
-    }) 
-      ],
-      
+        Levels(title: 'Level 3', containercolor: Colors.purple, image: 'assets/images/l3.png', onPress: (){
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>const SecondScreen()));
+      }),
+      Levels(title: 'Level 4', containercolor: Colors.blueAccent, image: 'assets/images/l4.png', onPress: (){
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>const SecondScreen()));
+      }) 
+        ],
+        
+      ),
     ),
 //  bottomNavigationBar:const Homeicon(),
 //IconButton(onPressed: (){
 // Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomeScreen()));
 //           }, icon: const Icon(Icons.home_rounded),iconSize: 44,color: Colors.deepOrange,),
+       bottomNavigationBar:const Homeicon(),
+    
     );
 
   }

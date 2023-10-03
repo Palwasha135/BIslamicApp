@@ -2,9 +2,10 @@
 
 import 'package:flutter/material.dart';
 //import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:fyp/app/components/appbar.dart';
+ import 'package:fyp/app/components/appbar.dart';
 import 'package:fyp/app/components/homeicon.dart';
+
+import 'package:fyp/app/screens/thirdscreen.dart';
 //import 'package:fyp/app/screens/home.dart';
 
 import '../components/dua.dart';
@@ -22,15 +23,14 @@ class _FifthScreenState extends State<FifthScreen> {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: MyAppBar(
-        actions: [
-IconButton(onPressed: (){
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>const FifthScreen()));
-     }, icon:const Icon(Icons.dehaze_rounded),iconSize: 38,)
-        ],
+        onleadingtap: () {
+      Navigator.push(context, MaterialPageRoute(builder: (context)=> const ThirdScreen()));
+    },
+        actions:const  [],
       ),
-      body: Column(children: const [
+      body: const Column(children:  [
 
-  Expanded(child: Center(child: DuaScreen(assetImagePath: 'assets/images/screen2.jpg', iconData: Homeicon()))),
+  Expanded(child: Center(child: DuaScreen(assetImagePath: 'assets/images/afraid1.2.jpg', iconData: Homeicon()))),
 
 ],),
 //  bottomNavigationBar:IconButton(onPressed: (){

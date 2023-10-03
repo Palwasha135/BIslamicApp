@@ -3,15 +3,21 @@ import 'package:fyp/app/components/appbar.dart';
 import 'package:fyp/app/components/dua.dart';
 import 'package:fyp/app/components/homeicon.dart';
 
+import 'package:fyp/app/screens/pillar_screen.dart';
+
 class Zakatscreen extends StatelessWidget {
   const Zakatscreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  const  Scaffold(
+    return Scaffold(
 appBar: MyAppBar(
-  actions: []),
-body: DuaScreen(assetImagePath: 'assets/images/Zscreen.jpg', iconData:  Homeicon(),
+         onleadingtap: () {
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>const PP()));
+    },
+        actions:const [],
+      ),
+body:const  DuaScreen(assetImagePath: 'assets/images/Zscreen.jpg', iconData:  Homeicon(),
 
 
 

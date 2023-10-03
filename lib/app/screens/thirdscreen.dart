@@ -6,13 +6,20 @@
 import'package:flutter/material.dart';
 import 'package:fyp/app/components/appbar.dart';
 import 'package:fyp/app/components/homeicon.dart';
+import 'package:fyp/app/screens/eighthscreen.dart';
+import 'package:fyp/app/screens/eleventhscreen.dart';
 import 'package:fyp/app/screens/fifthscreen.dart';
 import 'package:fyp/app/screens/fourthscreen.dart';
+import 'package:fyp/app/screens/ninthscreen.dart';
+
 //import 'package:fyp/app/screens/home.dart';
 import 'package:fyp/app/screens/secondscreen.dart';
 
 import 'package:fyp/app/components/level.dart';
+import 'package:fyp/app/screens/seventhscreen.dart';
 import 'package:fyp/app/screens/sixthscreen.dart';
+import 'package:fyp/app/screens/tenthscreen.dart';
+import 'package:fyp/app/screens/twelfthscreen.dart';
  
 class ThirdScreen extends StatefulWidget {
   const ThirdScreen({super.key});
@@ -29,10 +36,10 @@ class _ThirdScreenState extends State<ThirdScreen> {
         appBar: MyAppBar(
           //title: 'B Islamic',
   
-    // onleadingtap: () {
-    //   Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomeScreen()));
-    // },
-    actions:  [
+    onleadingtap: () {
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>const SecondScreen()));
+    },
+    actions:  const [
       
     //  IconButton(onPressed: (){
     //   Navigator.push(context, MaterialPageRoute(builder: (context)=> FourthScreen()));
@@ -43,37 +50,37 @@ class _ThirdScreenState extends State<ThirdScreen> {
       children: [
         
         Expanded(
-          child: Levels(title: 'Dua Before Meal', containercolor: Colors.orange, image: 'assets/images/secondlvl.png', onPress: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=> FourthScreen()));
+          child: Levels(title: 'Dua Upon Sneezing', containercolor: Colors.orange, image: 'assets/images/1.1.png', onPress: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> const FourthScreen()));
             }),
         ),
-    Levels(title: 'Dua befor Sleeping', containercolor: Colors.red, image: 'assets/images/secondlvl.png', onPress: (){
-    Navigator.push(context, MaterialPageRoute(builder: (context)=> FifthScreen()));
+    Levels(title: 'Dua When Feeling Afraid ', containercolor: Colors.red, image: 'assets/images/1.2.png', onPress: (){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=> const FifthScreen()));
     }) ,
       
-      Levels(title: 'Dua After Sleeping', containercolor: Colors.purple, image: 'assets/images/secondlvl.png', onPress: (){
+      Levels(title: 'Dua For Thanking Someone', containercolor: Colors.purple, image: 'assets/images/1.3.png', onPress: (){
     Navigator.push(context, MaterialPageRoute(builder: (context)=>const SixthScreen()));
     }),
-    Levels(title: 'Dua Before Eating', containercolor: Colors.blueAccent, image: 'assets/images/secondlvl.png', onPress: (){
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>const SecondScreen()));
+    Levels(title: 'Dua For When Seeing Muslim Smiling ', containercolor: Colors.blueAccent, image: 'assets/images/1.4.png', onPress: (){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>const SeventhScreen()));
     }) ,
-    Levels(title: 'Dua After Eating', containercolor: Colors.blueAccent, image: 'assets/images/secondlvl.png', onPress: (){
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>const SecondScreen()));
-    }) ,Levels(title: 'Dua During Eating', containercolor: Colors.cyanAccent, image: 'assets/images/secondlvl.png', onPress: (){
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>const SecondScreen()));
+    Levels(title: 'Dua For Increase Knowledge ', containercolor: Colors.blueAccent, image: 'assets/images/1.5.png', onPress: (){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>const EightScreen()));
+    }) ,Levels(title: 'Dua For Forgiveness ', containercolor: Colors.cyanAccent, image: 'assets/images/1.6.png', onPress: (){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>const NinthScreen()));
     }) ,
-    Levels(title: 'Level 4', containercolor: Colors.deepOrange, image: 'assets/images/secondlvl.png', onPress: (){
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>const SecondScreen()));
+    Levels(title: 'Dua When It Rains ', containercolor: Colors.deepOrange, image: 'assets/images/1.7.png', onPress: (){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>const TenthScreen()));
     }) ,
-    Levels(title: ' Level 5', containercolor: Colors.pink, image: 'assets/images/secondlvl.png', onPress: (){
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>const SecondScreen()));
+    Levels(title: ' Dua While Visiting The Ill', containercolor: Colors.pink, image: 'assets/images/1.8.png', onPress: (){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>const EleventhScreen()));
     }) ,
-    Levels(title: 'Level 4', containercolor: Colors.yellow, image: 'assets/images/secondlvl.png', onPress: (){
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>const SecondScreen()));
+    Levels(title: 'Dua While Ascending or Descending', containercolor: Colors.yellow, image: 'assets/images/1.9.png', onPress: (){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>const TwelfthScreen()));
     }) ,
-    Levels(title: 'Level 4', containercolor: Colors.brown, image: 'assets/images/secondlvl.png', onPress: (){
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>const SecondScreen()));
-    }) ,
+    // Levels(title: 'Level 4', containercolor: Colors.brown, image: 'assets/images/secondlvl.png', onPress: (){
+    // Navigator.push(context, MaterialPageRoute(builder: (context)=>const SecondScreen()));
+    // }) ,
       ],
       
     ),

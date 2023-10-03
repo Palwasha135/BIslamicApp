@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 //import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:fyp/app/screens/home.dart';
 
 class BNavigBar extends StatelessWidget {
@@ -10,7 +9,7 @@ class BNavigBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       onTap: (value) {
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomeScreen()));
       },
       items: const [
         BottomNavigationBarItem(
