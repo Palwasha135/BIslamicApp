@@ -62,7 +62,7 @@ class Parentsguide extends StatelessWidget {
             
               
               ),
-              const SizedBox( height:49),
+              const SizedBox( height:48),
               Container(height: 200,
              // width: 335,
                decoration:const  BoxDecoration(
