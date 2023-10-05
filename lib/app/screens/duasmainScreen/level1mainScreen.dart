@@ -50,32 +50,32 @@ class _ThirdScreenState extends State<ThirdScreen> {
       children: [
         
         Expanded(
-          child: Levels(title: 'Dua Upon Sneezing', containercolor: Colors.orange, image: 'assets/images/1.1.png', onPress: (){
+          child: Levels(title: ' Upon Sneezing', containercolor: Colors.orange, image: 'assets/images/1.1.png', onPress: (){
             Navigator.push(context, MaterialPageRoute(builder: (context)=> const FourthScreen()));
             }),
         ),
-    Levels(title: 'Dua When Feeling Afraid ', containercolor: Colors.red, image: 'assets/images/1.2.png', onPress: (){
+    Levels(title: ' When Feeling Afraid ', containercolor: Colors.red, image: 'assets/images/1.2.png', onPress: (){
     Navigator.push(context, MaterialPageRoute(builder: (context)=> const FifthScreen()));
     }) ,
       
-      Levels(title: 'Dua For Thanking Someone', containercolor: Colors.purple, image: 'assets/images/1.3.png', onPress: (){
+      Levels(title: ' For Thanking Someone', containercolor: Colors.purple, image: 'assets/images/1.3.png', onPress: (){
     Navigator.push(context, MaterialPageRoute(builder: (context)=>const SixthScreen()));
     }),
-    Levels(title: 'Dua For When Seeing Muslim Smiling ', containercolor: Colors.blueAccent, image: 'assets/images/1.4.png', onPress: (){
+    Levels(title: ' For When Seeing Muslim Smiling ', containercolor: Colors.blueAccent, image: 'assets/images/1.4.png', onPress: (){
     Navigator.push(context, MaterialPageRoute(builder: (context)=>const SeventhScreen()));
     }) ,
-    Levels(title: 'Dua For Increase Knowledge ', containercolor: Colors.blueAccent, image: 'assets/images/1.5.png', onPress: (){
+    Levels(title: ' For Increase Knowledge ', containercolor: Colors.blueAccent, image: 'assets/images/1.5.png', onPress: (){
     Navigator.push(context, MaterialPageRoute(builder: (context)=>const EightScreen()));
-    }) ,Levels(title: 'Dua For Forgiveness ', containercolor: Colors.cyanAccent, image: 'assets/images/1.6.png', onPress: (){
+    }) ,Levels(title: ' For Forgiveness ', containercolor: Colors.cyanAccent, image: 'assets/images/1.6.png', onPress: (){
     Navigator.push(context, MaterialPageRoute(builder: (context)=>const NinthScreen()));
     }) ,
-    Levels(title: 'Dua When It Rains ', containercolor: Colors.deepOrange, image: 'assets/images/1.7.png', onPress: (){
+    Levels(title: ' When It Rains ', containercolor: Colors.deepOrange, image: 'assets/images/1.7.png', onPress: (){
     Navigator.push(context, MaterialPageRoute(builder: (context)=>const TenthScreen()));
     }) ,
-    Levels(title: ' Dua While Visiting The Ill', containercolor: Colors.pink, image: 'assets/images/1.8.png', onPress: (){
+    Levels(title: '  While Visiting The Ill', containercolor: Colors.pink, image: 'assets/images/1.8.png', onPress: (){
     Navigator.push(context, MaterialPageRoute(builder: (context)=>const EleventhScreen()));
     }) ,
-    Levels(title: 'Dua While Ascending or Descending', containercolor: Colors.yellow, image: 'assets/images/1.9.png', onPress: (){
+    Levels(title: ' While Ascending or Descending', containercolor: Colors.yellow, image: 'assets/images/1.9.png', onPress: (){
     Navigator.push(context, MaterialPageRoute(builder: (context)=>const TwelfthScreen()));
     }) ,
     // Levels(title: 'Level 4', containercolor: Colors.brown, image: 'assets/images/secondlvl.png', onPress: (){

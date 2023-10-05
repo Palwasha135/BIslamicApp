@@ -4,11 +4,12 @@ import 'package:fyp/app/components/appbar.dart';
 import 'package:fyp/app/components/homeicon.dart';
 //import 'package:fyp/app/components/homeicon.dart';
 import 'package:fyp/app/components/level.dart';
+import 'package:fyp/app/screens/duasmainScreen/level2mainScreen.dart';
+import 'package:fyp/app/screens/duasmainScreen/level3mainScreen.dart';
 
-import 'package:fyp/app/screens/fourthscreen.dart';
 import 'package:fyp/app/screens/home.dart';
 //import 'package:fyp/app/screens/home.dart';
-import 'package:fyp/app/screens/thirdscreen.dart';
+import 'package:fyp/app/screens/duasmainScreen/level1mainScreen.dart';
 
 class SecondScreen extends StatefulWidget {
   const SecondScreen({super.key});
@@ -49,11 +50,11 @@ class _SecondScreenState extends State<SecondScreen> {
               }),
           ),
       Levels(title: 'Level 2', containercolor: Colors.red, image: 'assets/images/l2.png', onPress: (){
-      Navigator.push(context, MaterialPageRoute(builder: (context)=> const FourthScreen()));
+      Navigator.push(context, MaterialPageRoute(builder: (context)=> const Level2Screen()));
       }) ,
         
         Levels(title: 'Level 3', containercolor: Colors.purple, image: 'assets/images/l3.png', onPress: (){
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>const SecondScreen()));
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>const Level3Screen()));
       }),
       Levels(title: 'Level 4', containercolor: Colors.blueAccent, image: 'assets/images/l4.png', onPress: (){
       Navigator.push(context, MaterialPageRoute(builder: (context)=>const SecondScreen()));
@@ -62,11 +63,7 @@ class _SecondScreenState extends State<SecondScreen> {
         
       ),
     ),
-//  bottomNavigationBar:const Homeicon(),
-//IconButton(onPressed: (){
-// Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomeScreen()));
-//           }, icon: const Icon(Icons.home_rounded),iconSize: 44,color: Colors.deepOrange,),
-       bottomNavigationBar:const Homeicon(),
+   bottomNavigationBar:const Homeicon(),
     
     );
 

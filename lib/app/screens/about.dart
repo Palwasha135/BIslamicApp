@@ -28,14 +28,14 @@ class About extends StatelessWidget {
               color: Color.fromARGB(255, 29, 172, 157),
 borderRadius:BorderRadius.only(
   topLeft:Radius.circular(54),
-  bottomRight: Radius.circular(82),
+  bottomRight: Radius.circular(100),
 ),
     ),
       child:const  Padding(
         padding:  EdgeInsets.only(
           top:25,
-          left:13,
-          right: 10,
+          left:12,
+          right: 11,
         ),
         child:  Text('The Application that utilizes an engaging and interactive approach to teach children the fundamental tenets of Islam. This app covers topics such as daily supplications, the Pillars of Islam, and the Seerah of the Prophet (peace be upon him).It is designed to promote Islamic education and values through a fun and interactive learning experience.',style: TextStyle(color: Colors.white, fontSize: 19)),
       )

@@ -19,12 +19,12 @@ class Parentsguide extends StatelessWidget {
   
          body: ListView(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+             const  Padding(
+                padding:  EdgeInsets.all(8.0),
                 child: Text('PARENTS GUIDE',textAlign:TextAlign.center,style:TextStyle(color: Colors.white,fontSize: 23)),
               ),
               Container(
-                height: 200,
+                height: 220,
               
                 decoration:const  BoxDecoration(
                   color: Colors.orange,
@@ -33,7 +33,7 @@ class Parentsguide extends StatelessWidget {
                         ),
               child:const  Padding(
                 padding:  EdgeInsets.only(
-              top:25,
+              top:20,
               left:13,
               right: 10,
               bottom: 10,

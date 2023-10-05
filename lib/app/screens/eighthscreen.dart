@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:fyp/app/components/appbar.dart';
 import 'package:fyp/app/components/homeicon.dart';
 
-import 'package:fyp/app/screens/thirdscreen.dart';
+import 'package:fyp/app/screens/duasmainScreen/level1mainScreen.dart';
 
 import '../components/dua.dart';
 
