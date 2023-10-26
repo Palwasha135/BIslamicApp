@@ -1,14 +1,19 @@
-// ignore_for_file: unused_import
+// ignore_for_file: unused_import, depend_on_referenced_packages
 
 import 'package:flutter/material.dart';
 import 'package:fyp/app/constant.dart';
 import 'package:fyp/app/provider/theme_provider.dart';
 import 'package:fyp/app/screens/home.dart';
+import 'package:fyp/app/screens/splashScreen.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 // import 'dart:html';
-// import 'dart:io';
 
-void main(){
+
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Future.delayed(const Duration(seconds:2));
+  FlutterNativeSplash.remove();
   runApp(const MyApp());
 }
 
@@ -36,7 +41,7 @@ void main(){
         scaffoldBackgroundColor:kbgcolor,
       ),
     debugShowCheckedModeBanner: false,
-  home:const   HomeScreen(),
+  home:const HomeScreen(),
 
   );
   

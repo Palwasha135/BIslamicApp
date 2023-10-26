@@ -1,15 +1,16 @@
 //import 'dart:ffi
 import 'package:flutter/material.dart';
-import 'package:fyp/app/components/appbar.dart';
-import 'package:fyp/app/components/homeicon.dart';
+import 'package:fyp/app/reusable_widgets/appbar.dart';
+import 'package:fyp/app/reusable_widgets/home_icon.dart';
 //import 'package:fyp/app/components/homeicon.dart';
-import 'package:fyp/app/components/level.dart';
-import 'package:fyp/app/screens/duasmainScreen/level2mainScreen.dart';
-import 'package:fyp/app/screens/duasmainScreen/level3mainScreen.dart';
+import 'package:fyp/app/reusable_widgets/level.dart';
+import 'package:fyp/app/screens/Dua/dua_main_screen/level2mainScreen.dart';
+import 'package:fyp/app/screens/Dua/dua_main_screen/level3mainScreen.dart';
+import 'package:fyp/app/screens/dua/dua_main_screen/level4mainScreen.dart';
 
 import 'package:fyp/app/screens/home.dart';
 //import 'package:fyp/app/screens/home.dart';
-import 'package:fyp/app/screens/duasmainScreen/level1mainScreen.dart';
+import 'package:fyp/app/screens/Dua/dua_main_screen/level1mainScreen.dart';
 
 class SecondScreen extends StatefulWidget {
   const SecondScreen({super.key});
@@ -27,8 +28,9 @@ class _SecondScreenState extends State<SecondScreen> {
           //title: 'B Islamic',
   
     onleadingtap: () {
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomeScreen()));
+      Navigator.pop(context,MaterialPageRoute(builder: (context) =>const  HomeScreen()));
     },
+    //push(context, MaterialPageRoute(builder: (context)=>const HomeScreen()));
     actions:  const [
       
     //  IconButton(onPressed: (){
@@ -46,7 +48,7 @@ class _SecondScreenState extends State<SecondScreen> {
           
           Expanded(
             child: Levels(title: 'Level 1', containercolor: Colors.orange, image: 'assets/images/secondlvl.png', onPress: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>const ThirdScreen()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const Level1mainScreen()));
               }),
           ),
       Levels(title: 'Level 2', containercolor: Colors.red, image: 'assets/images/l2.png', onPress: (){
@@ -57,7 +59,7 @@ class _SecondScreenState extends State<SecondScreen> {
       Navigator.push(context, MaterialPageRoute(builder: (context)=>const Level3Screen()));
       }),
       Levels(title: 'Level 4', containercolor: Colors.blueAccent, image: 'assets/images/l4.png', onPress: (){
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>const SecondScreen()));
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>const Level4Screen()));
       }) 
         ],
         

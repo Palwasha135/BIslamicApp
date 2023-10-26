@@ -5,13 +5,15 @@
 //import 'package:fyp/app/screens/mode.dart';
   //         theme coding  
 //import 'package:provider/provider.dart';
-import 'package:fyp/app/screens/about.dart';
-import 'package:fyp/app/screens/parentsguid.dart';
-import 'package:fyp/app/screens/pillar_screen.dart';
+import 'package:fyp/app/screens/more_vert_icon/about.dart';
+import 'package:fyp/app/screens/more_vert_icon/parentalguide.dart';
+import 'package:fyp/app/screens/pillarofIslam/pillar_main_screen/pillar_screen.dart';
+import 'package:fyp/app/screens/seerah/seerah_main_screen.dart';
 import 'package:fyp/app/screens/secondscreen.dart';
 import 'package:flutter/material.dart';
-import 'package:fyp/app/components/button.dart';
+import 'package:fyp/app/reusable_widgets/home_screen_container.dart';
 import 'package:fyp/app/constant.dart';
+
 //import 'package:fyp/app/components/change_theme_button_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -34,8 +36,8 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         toolbarHeight: 103,
         backgroundColor: kbgcolor,
-        leadingWidth: 99,
-        leading: Image.asset('assets/images/logo.png'),
+        leadingWidth: 133,
+        leading: Image.asset('assets/images/leadinglogo.png'),
         actions: [
 //                     theme coding
 
@@ -49,7 +51,7 @@ return const [
     ),
     PopupMenuItem(
       value:2,
-      child: Text('Parents Guide'),
+      child: Text('Parental Guide'),
     
     ),
     //         theme coding  
@@ -158,7 +160,7 @@ return const [
                    assetImagePath: 'assets/images/Sunnah.png',
                    //assetImagePath1: null,
                    onPress: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const SecondScreen()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const SeerahMainScreen()));
                                    },
                    btnColor: Colors.purple,
                                    ),
