@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:fyp/app/reusable_widgets/appbar.dart';
 import 'package:fyp/app/reusable_widgets/home_icon.dart';
 import 'package:fyp/app/reusable_widgets/home_screen_container.dart';
-import 'package:fyp/app/screens/pillarofIslam/pillar_main_screen/pillar_screen.dart';
+
+import 'package:fyp/app/screens/seerah/Sunnah_o_aadaab/sunnah_main_screen.dart';
 import 'package:fyp/app/screens/seerah/family/family_gridform_screen.dart';
 
 import 'package:fyp/app/screens/seerah/introduction/intro_main_screen.dart';
@@ -50,7 +51,7 @@ appBar: MyAppBar(
                    assetImagePath: 'assets/images/Seerah/Sunnah.png',
                    //assetImagePath1: '',
                    onPress: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const PP()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const SunnahgridformScreen()));
                   },
                   btnColor:Colors.yellow,
                   ),

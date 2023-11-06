@@ -4,14 +4,14 @@ import 'package:fyp/app/reusable_widgets/home_icon.dart';
 import 'package:fyp/app/screens/seerah/family/family_gridform_screen.dart';
 import '../../../reusable_widgets/dua_screen_widget.dart';
 
-class UnclenamesScreen extends StatefulWidget {
-  const UnclenamesScreen({super.key});
+class GreetingSunnahScreen extends StatefulWidget {
+  const GreetingSunnahScreen({super.key});
 
   @override
-  State<UnclenamesScreen> createState() => _UnclenamesScreenState();
+  State<GreetingSunnahScreen> createState() => _GreetingSunnahScreenState();
 }
 
-class _UnclenamesScreenState extends State<UnclenamesScreen> {
+class _GreetingSunnahScreenState extends State<GreetingSunnahScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -23,7 +23,7 @@ class _UnclenamesScreenState extends State<UnclenamesScreen> {
       ),
       body: const Column(children:  [
 
-  Expanded(child: Center(child: DuaScreen(assetImagePath: 'assets/images/Seerah/uncles.jpg', iconData: Homeicon()))),
+  Expanded(child: Center(child: DuaScreen(assetImagePath: 'assets/images/Seerah/greetingSunnah.jpg', iconData: Homeicon()))),
 
 ],),
     );

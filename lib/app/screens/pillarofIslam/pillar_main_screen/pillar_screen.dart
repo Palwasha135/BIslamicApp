@@ -39,7 +39,7 @@ class PP extends StatelessWidget {
                  mainAxisAlignment: MainAxisAlignment.center,
                   children:  [
                     InkWell(onTap: (){
-                        Navigator.pop(context, MaterialPageRoute(builder: (context)=>const Tauheedscreen()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const Tauheedscreen()));
                         },
                          child: const Pillar(
                                                // onTap: () {
