@@ -61,21 +61,21 @@ class _Level1mainScreenState extends State<Level1mainScreen> {
       Levels(title: ' For Thanking Someone', containercolor: Colors.purple, image: 'assets/images/1.3.png', onPress: (){
     Navigator.push(context, MaterialPageRoute(builder: (context)=>const SixthScreen()));
     }),
-    Levels(title: ' For When Seeing Muslim Smiling ', containercolor: Colors.blueAccent, image: 'assets/images/1.4.png', onPress: (){
+    Levels(title: 'When Seeing Muslim Smiling ', containercolor: Colors.blueAccent, image: 'assets/images/1.4.png', onPress: (){
     Navigator.push(context, MaterialPageRoute(builder: (context)=>const SeventhScreen()));
     }) ,
-    Levels(title: ' For Increase Knowledge ', containercolor: Colors.blueAccent, image: 'assets/images/1.5.png', onPress: (){
+    Levels(title: ' For Increase Knowledge ', containercolor: const Color.fromARGB(255, 152, 160, 84), image: 'assets/images/1.5.png', onPress: (){
     Navigator.push(context, MaterialPageRoute(builder: (context)=>const EightScreen()));
     }) ,Levels(title: ' For Forgiveness ', containercolor: Colors.cyanAccent, image: 'assets/images/1.6.png', onPress: (){
     Navigator.push(context, MaterialPageRoute(builder: (context)=>const NinthScreen()));
     }) ,
-    Levels(title: ' When It Rains ', containercolor: Colors.deepOrange, image: 'assets/images/1.7.png', onPress: (){
+    Levels(title: ' When It Rains ', containercolor: Colors.yellow, image: 'assets/images/1.7.png', onPress: (){
     Navigator.push(context, MaterialPageRoute(builder: (context)=>const TenthScreen()));
     }) ,
-    Levels(title: '  While Visiting The Ill', containercolor: Colors.pink, image: 'assets/images/1.8.png', onPress: (){
+    Levels(title: '  While Visiting The ill', containercolor: Colors.pink, image: 'assets/images/1.8.png', onPress: (){
     Navigator.push(context, MaterialPageRoute(builder: (context)=>const EleventhScreen()));
     }) ,
-    Levels(title: ' While Ascending or Descending', containercolor: Colors.yellow, image: 'assets/images/1.9.png', onPress: (){
+    Levels(title: ' While Ascending or Descending', containercolor: Colors.lightGreen, image: 'assets/images/1.9.png', onPress: (){
     Navigator.push(context, MaterialPageRoute(builder: (context)=>const TwelfthScreen()));
     }) ,
     

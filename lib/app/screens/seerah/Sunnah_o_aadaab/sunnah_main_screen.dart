@@ -21,7 +21,7 @@ class SunnahgridformScreen extends StatelessWidget {
     
     body:Padding(
       padding: const EdgeInsets.only(
-        top:33.0,
+        top:23.0,
         left:13.0,
         right:13.0,),
       child: SingleChildScrollView(

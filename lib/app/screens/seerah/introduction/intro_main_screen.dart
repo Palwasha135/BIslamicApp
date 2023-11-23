@@ -23,20 +23,20 @@ class IntroMainScreen extends StatelessWidget {
     
     body:Padding(
       padding: const EdgeInsets.only(
-        top:33.0,
-        left:13.0,
-        right:13.0,),
-      child: GridView(gridDelegate:const  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,mainAxisSpacing: 9,crossAxisSpacing: 9,),
+        top:15.0,
+        left:8.0,
+        right:8.0),
+      child: GridView(gridDelegate:const  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,mainAxisSpacing: 3,crossAxisSpacing:3),
       children: [
         SeerahGridformScreen(imagepath: 'assets/images/Seerah/namecontainer.png', onPress: (){
       Navigator.push(context, MaterialPageRoute(builder: (context)=>const NameScreen()));
         },
         ),
         SeerahGridformScreen(imagepath: 'assets/images/Seerah/birthplacecontainer.png', onPress: (){
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>const BirthplaceScreen()));
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>const BirthplaceScreen()));
         },
         ),
-        SeerahGridformScreen(imagepath: 'assets/images/Seerah/dobcontainer.png', onPress: (){
+        SeerahGridformScreen(imagepath: 'assets/images/Seerah/datecontainer.png', onPress: (){
       Navigator.push(context, MaterialPageRoute(builder: (context)=>const DobScreen()));
         },
         ),
@@ -49,7 +49,7 @@ class IntroMainScreen extends StatelessWidget {
         },
         ),
         
-         SeerahGridformScreen(imagepath: 'assets/images/Seerah/fostermothercontainer.png', onPress: (){
+         SeerahGridformScreen(imagepath: 'assets/images/Seerah/fostermothernamecont.png', onPress: (){
       Navigator.push(context, MaterialPageRoute(builder: (context)=>const FosterMothernameScreen()));
         },
         ),

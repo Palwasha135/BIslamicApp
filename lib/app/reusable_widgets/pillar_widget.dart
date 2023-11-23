@@ -102,7 +102,7 @@ class Pillar extends StatelessWidget {
                   
                   width: tecondwidth,
               
-                  child: Center(child:  Expanded(child: Text(text,style: const TextStyle(color: Colors.white),)),),
+                  child: Center(child:  Expanded(child: Text(text,style:  TextStyle(fontSize: MediaQuery.of(context).size.width *0.03, color: Colors.white),)),),
                   
                   ),
                   ),

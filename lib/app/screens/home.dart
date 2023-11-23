@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
     //     : 'LightTheme';
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 103,
+        toolbarHeight: 130,
         backgroundColor: kbgcolor,
         leadingWidth: 133,
         leading: Image.asset('assets/images/leadinglogo.png'),
@@ -156,7 +156,7 @@ return const [
                      },
                     btnColor: Colors.cyanAccent,
                      ),
-                   Mybutton(title: 'Seerat e Nabi \n(S.A.W.W)',
+                   Mybutton(title: 'Seerat e Nabi (S.A.W.W)',
                    assetImagePath: 'assets/images/Sunnah.png',
                    //assetImagePath1: null,
                    onPress: (){

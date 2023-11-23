@@ -17,6 +17,7 @@ import 'package:fyp/app/screens/Dua/dua_level2/goingbed6.dart';
 import 'package:fyp/app/screens/Dua/dua_level2/leavingtoilet9.dart';
 import 'package:fyp/app/screens/Dua/dua_level2/wakingup7.dart';
 import 'package:fyp/app/reusable_widgets/level.dart';
+import 'package:fyp/app/screens/dua/dua_level2/aftermeal3.dart';
 import 'package:fyp/app/screens/secondscreen.dart';
 
 class Level2Screen extends StatefulWidget {
@@ -52,13 +53,13 @@ class _Level2ScreenState extends State<Level2Screen> {
             Navigator.push(context, MaterialPageRoute(builder: (context)=> const BeforeMealScreen ()));
             }),
         ),
-    Levels(title: ' When Forget Bismillah ', containercolor: Colors.red, image: 'assets/images/level2/2.png', onPress: (){
+    Levels(title: ' When Forget Dua Before Meal ', containercolor: Colors.red, image: 'assets/images/level2/2.png', onPress: (){
     Navigator.push(context, MaterialPageRoute(builder: (context)=> const ForgetduaScreen()));
     }) ,
       
-    //   Levels(title: ' After Meal', containercolor: Colors.purple, image: 'assets/images/level2/3.png', onPress: (){
-    // Navigator.push(context, MaterialPageRoute(builder: (context)=>const AfterMealScreen()));
-    // }),
+      Levels(title: ' After Meal', containercolor: Colors.purple, image: 'assets/images/level2/aftermealimg.png', onPress: (){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>const AfterMealScreen()));
+    }),
     Levels(title: ' After Drinking Milk ', containercolor: Colors.blueAccent, image: 'assets/images/level2/4.png', onPress: (){
     Navigator.push(context, MaterialPageRoute(builder: (context)=>const MilkduaScreen ()));
     }) ,

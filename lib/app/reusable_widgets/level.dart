@@ -40,8 +40,8 @@ required this.image,
               padding: const EdgeInsets.only(top:10.0),
               child: Image.asset(image,alignment: Alignment.center),
             )),
-          const  SizedBox(height: 3,),
-           Expanded(child: Text(title,style:const  TextStyle(fontSize: 13,color: Colors.black),textAlign: TextAlign.center,))
+          const  SizedBox(height: 2,),
+           Expanded(child: Text(title,style:  TextStyle(fontSize: MediaQuery.of(context).size.width*0.04,color: Colors.black),textAlign: TextAlign.center,))
           ]),
               ),
         ),

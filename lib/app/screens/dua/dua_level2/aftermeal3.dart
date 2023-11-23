@@ -29,7 +29,7 @@ class _AfterMealScreenState extends State<AfterMealScreen> {
       ),
       body: const Column(children:  [
 
-  Expanded(child: Center(child: DuaScreen(assetImagePath: 'assets/images/level2.jpg', iconData:Homeicon()))),
+  Expanded(child: Center(child: DuaScreen(assetImagePath: 'assets/images/level2/aftermeal.jpg', iconData:Homeicon()))),
 
 ],),
 

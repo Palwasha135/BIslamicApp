@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constant.dart';
+//import '../constant.dart';
 
 class Mybutton extends StatelessWidget {
   final String title;
@@ -28,7 +28,7 @@ final String assetImagePath;
         onTap: onPress,
         child: Container(
                     height: 100,
-    width: 370,
+     width: 370,
                   decoration: BoxDecoration(
                     borderRadius:  BorderRadius.circular(30),
                     
@@ -44,10 +44,9 @@ final String assetImagePath;
                       children: [
                         Image.asset(assetImagePath,fit: BoxFit.fitHeight,
                         alignment:Alignment.centerLeft),
-                      const   SizedBox(width: 23,),
+                      const   SizedBox(width: 20,),
                       Expanded(
-                        flex: 2,
-                        child: Text(title,style:kheadingTextStyle,
+                        child: Text(title,style:TextStyle(fontSize: MediaQuery.sizeOf(context).width *0.06,color: Colors.white,fontWeight: FontWeight.bold),
                                         ),
                       ),
                                     //Image.asset(alignment: Alignment.centerRight,)
