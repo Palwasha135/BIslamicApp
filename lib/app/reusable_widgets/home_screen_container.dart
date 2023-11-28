@@ -38,23 +38,24 @@ final String assetImagePath;
                     
              
                   ),
-                  child: Expanded(
-                    
-                    child: Row(
-                      children: [
-                        Image.asset(assetImagePath,fit: BoxFit.fitHeight,
-                        alignment:Alignment.centerLeft),
-                      const   SizedBox(width: 20,),
-                      Expanded(
-                        child: Text(title,style:TextStyle(fontSize: MediaQuery.sizeOf(context).width *0.06,color: Colors.white,fontWeight: FontWeight.bold),
-                                        ),
+                  child: Row(
+                    children: [
+                      Image.asset(assetImagePath,fit: BoxFit.fitHeight,
+                      alignment:Alignment.centerLeft),
+                    const   SizedBox(width: 10,),
+                    Expanded(
+                      child: LayoutBuilder(
+                        builder: (context,constraints) {
+                          return Text(title,style:TextStyle(fontSize: constraints.maxHeight * 0.3,color: Colors.white,fontWeight: FontWeight.bold),
+                                          );
+                        }
                       ),
-                                    //Image.asset(alignment: Alignment.centerRight,)
-                                   // Image.asset('images/pillarend.jpg'
-                    //,alignment: Alignment.centerRight,)
-                     
-                      ],
                     ),
+                                  //Image.asset(alignment: Alignment.centerRight,)
+                                 // Image.asset('images/pillarend.jpg'
+                  //,alignment: Alignment.centerRight,)
+                   
+                    ],
                   ),
                   
                   ),

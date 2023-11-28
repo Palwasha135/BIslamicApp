@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fyp/app/reusable_widgets/appbar.dart';
+import 'package:fyp/app/reusable_widgets/home_icon.dart';
 import 'package:fyp/app/reusable_widgets/seerah_gridform_widget.dart';
 import 'package:fyp/app/screens/seerah/introduction/birth_place_screen.dart';
 import 'package:fyp/app/screens/seerah/introduction/dob_screen.dart';
@@ -23,7 +24,7 @@ class IntroMainScreen extends StatelessWidget {
     
     body:Padding(
       padding: const EdgeInsets.only(
-        top:15.0,
+        top:32.0,
         left:8.0,
         right:8.0),
       child: GridView(gridDelegate:const  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,mainAxisSpacing: 3,crossAxisSpacing:3),
@@ -58,8 +59,8 @@ class IntroMainScreen extends StatelessWidget {
       
       
       ),
-    )
-
+    ),
+   bottomNavigationBar:const Homeicon(),
     );
      
   }

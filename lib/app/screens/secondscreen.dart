@@ -41,9 +41,9 @@ class _SecondScreenState extends State<SecondScreen> {
 
     body:Padding(
       padding: const EdgeInsets.only(
-        top:29,
+        top:39,
       ),
-      child: GridView(gridDelegate:const  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,mainAxisSpacing: 9,crossAxisSpacing: 19,),
+      child: GridView(gridDelegate:const  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,mainAxisSpacing: 5,crossAxisSpacing: 9,),
         children: [
           
           Expanded(

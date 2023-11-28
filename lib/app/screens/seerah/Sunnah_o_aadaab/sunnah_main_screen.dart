@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fyp/app/reusable_widgets/appbar.dart';
+import 'package:fyp/app/reusable_widgets/home_icon.dart';
 import 'package:fyp/app/reusable_widgets/seerah_gridform_widget.dart';
 import 'package:fyp/app/screens/seerah/Sunnah_o_aadaab/dressingSunnah.dart';
 import 'package:fyp/app/screens/seerah/Sunnah_o_aadaab/eatingSunnah.dart';
@@ -51,8 +52,8 @@ class SunnahgridformScreen extends StatelessWidget {
         
         ),
       ),
-    )
-
+    ),
+   bottomNavigationBar:const Homeicon(),
     );
      
   }

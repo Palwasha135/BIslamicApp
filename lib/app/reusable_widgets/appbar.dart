@@ -27,7 +27,7 @@ this.leading,
   
   }):super(key:key);
 @override
-Size get preferredSize=>const Size.fromHeight(130);
+Size get preferredSize=>const Size.fromHeight(70);
   @override
   Widget build(BuildContext context) {
     return AppBar(

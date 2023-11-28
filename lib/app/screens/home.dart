@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
     //     : 'LightTheme';
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 130,
+        toolbarHeight: 75,
         backgroundColor: kbgcolor,
         leadingWidth: 133,
         leading: Image.asset('assets/images/leadinglogo.png'),
