@@ -43,7 +43,7 @@
 // }
 import 'package:flutter/material.dart';
 import 'package:fyp/app/reusable_widgets/home_icon.dart';
-
+//import 'package:fyp/app/reusable_widgets/audio_model.dart';
 // import 'package:flutter/material.dart';
 // import 'package:fyp/app/components/homeicon.dart';
 
@@ -84,7 +84,7 @@ class DuaScreen extends StatelessWidget {
             child: Homeicon(),
             
           ),
-         
+  //AudioModel(assetPath: 'assets/red2.mp3', title: 'title'),
         // Padding(
         //   padding: const EdgeInsets.only(top: 10),
         //   child: const Align(
